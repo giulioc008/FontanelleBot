@@ -1,6 +1,6 @@
-# Bot template
+# FontanelleBot
 
-**Python template** for building a **Bot**
+**Bot**, created by [Giulio Coa](https://t.me/giulioCoaInCamelCase), that tell where are the 3 drinking funtain closest to you position
 
 
 
@@ -14,22 +14,6 @@ Modules used to do asynchronous file operations
 * Documentation: https://github.com/mosquito/aiofile
 * Modules name: **aiofile**
 * Installing: `pip install --upgrade --no-cache-dir aiofile`
-
-
-
-### APScheduler
-
-Library that lets you schedule your Python code to be executed later, either just once or periodically
-
-* Version: 3.6.3
-* Website: https://apscheduler.readthedocs.io/en/stable/index.html
-* Documentation: https://apscheduler.readthedocs.io/en/stable/modules/schedulers/asyncio.html#module-apscheduler.schedulers.asyncio
-* Modules name: **apscheduler**
-* Requirements:
-	- Python >= 3.4: none
-	- Python 3.3: **asyncio**
-	- Python <= 3.2: **trollius**
-* Installing: `pip install --upgrade --no-cache-dir APScheduler`
 
 
 
@@ -54,7 +38,7 @@ Module used to connect to a MySQL Server
 
 ### Pyrogram
 
-Module used to create the UserBot
+Module used to create the Bot
 
 * Version: 0.17.0-async
 * Website: https://docs.pyrogram.org/
@@ -62,31 +46,6 @@ Module used to create the UserBot
 * Module name: **pyrogram**
 * Requirements: **TgCrypto**
 * Installing: `pip install --upgrade --no-cache-dir https://github.com/pyrogram/pyrogram/archive/asyncio.zip; pip install --upgrade --no-cache-dir TgCrypto`
-
-
-
-### Requests
-
-HTTP library for Python, built for human beings
-
-* Version: 2.23.0
-* Website: https://requests.readthedocs.io/en/master/
-* Documentation: https://requests.readthedocs.io/en/master/user/advanced/
-* Module name: **requests**
-* Installing: `pip install --upgrade --no-cache-dir requests`
-
-
-
-### Telegraph
-
-Python Telegraph API wrapper
-
-* Version: 1.4.0
-* Website: https://python-telegraph.readthedocs.io/en/latest/
-* Documentation: https://python-telegraph.readthedocs.io/en/latest/telegraph.html
-* Module name: **telegraph**
-* Requirements: **requests**
-* Installing: `pip install --upgrade --no-cache-dir telegraph`
 
 
 

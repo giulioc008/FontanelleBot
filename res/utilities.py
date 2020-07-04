@@ -1,34 +1,8 @@
 import asyncio
-from pymysql.connections import Connection
-from pyrogram import Client, Filters, InlineKeyboardButton, Message
+from pyrogram import Client, Filters, Message
 from pyrogram.errors import FloodWait
+import re
 from res.configurations import Configurations
-
-
-async def chat_button(client: Client, chat: dict, connection: Connection) -> InlineKeyboardButton:
-	"""
-		A coroutine that creates an InlineKeyboardButton form tha data of a chat
-		:param client: The application
-		:param chat: The chat's data
-		:return: InlineKeyboardButton
-	"""
-	if chat["username"] is not None:
-		invite_link = "https://t.me/{}".format(chat["username"])
-	elif chat["invite_link"] is not None:
-		invite_link = chat["invite_link"]
-	else:
-		# Generating the new invite_link
-		invite_link = await client.export_chat_invite_link(int(chat["id"]))
-
-		# Saving the new invite_link
-		with connection.cursor() as cursor:
-			cursor.execute("UPDATE `Chats` SET `invite_link`=%(invite_link)s WHERE `id`=%(id)s;", {
-				"id": int(chat["id"]),
-				"invite_link": invite_link
-			})
-		connection.commit()
-
-	return InlineKeyboardButton(text=chat["title"], url=invite_link)
 
 
 async def split_edit_text(config: Configurations, message: Message, text: str, **options):
